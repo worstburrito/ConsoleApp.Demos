@@ -1,5 +1,6 @@
 ﻿// declare variables - name and age
-string name = string.Empty;
+string firstName = string.Empty;
+string lastName = string.Empty;
 int age = 0;
 int retireAge = 65;
 decimal salary = 0;
@@ -9,8 +10,11 @@ bool working;
 
 
 // prompt the user for input
-Console.Write("Please enter your name: ");
-name = Console.ReadLine();
+Console.Write("Please enter your first name: ");
+firstName = Console.ReadLine();
+
+Console.Write("Please enter your last name: ");
+lastName = Console.ReadLine();
 
 Console.Write("Please enter your age: ");
 age = Convert.ToInt32(Console.ReadLine());
@@ -32,5 +36,5 @@ int yearsToRetire = retireAge - age;
 
 
 // output the results
-Console.WriteLine($"\nFull name: {name}\nAge: {age}\nWorking years remaining: {yearsToRetire}\nSalary: {salary:C}\nGender: {gender}\nCurrently employed: {working}");
+Console.WriteLine($"\nFull name: {firstName} {lastName}\nAge: {age}\nSalary: {salary:C}\nGender: {gender}\nCurrently employed: {working}\nWorking years remaining: {yearsToRetire}");
 
