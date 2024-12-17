@@ -1,5 +1,5 @@
 ﻿// declare variables - name and age
-string firstName = string.Empty;
+string? firstName = string.Empty;
 string lastName = string.Empty;
 int age = 0;
 int retireAge = 65;
