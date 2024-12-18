@@ -45,7 +45,7 @@ if (calculation == 1)
     Console.WriteLine("\nYou did not select a valid calculation.\n");
 }
 
-// Print Output
+// Print Output Decisions
 if (calculation >= 1 && calculation <= 4)
 {
     Console.WriteLine($"\n{num1} {symbol} {num2} = {result}\n");
