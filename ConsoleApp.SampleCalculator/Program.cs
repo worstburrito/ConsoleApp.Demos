@@ -77,6 +77,7 @@ while (choice != "E")
 
     Console.WriteLine("\nWould you like to continue? Press 'Enter' continue or 'E' to exit calculator: ");
     choice = Console.ReadLine();
+    Console.Clear();
 }
 Console.WriteLine("\n\n*~*~*~*~ THANK YOU for using the Sample Calculator! *~*~*~*~\n\n");
 
