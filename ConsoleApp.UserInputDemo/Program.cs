@@ -1,8 +1,12 @@
-﻿// declare variables - name and age
+﻿
+using System.Globalization;
+
+// declare variables - name and age
 string? firstName = string.Empty;
 string lastName = string.Empty;
 int age = 0;
-int retireAge = 65;
+DateOnly dob = new DateOnly();
+const int retireAge = 65;
 decimal salary = 0;
 char gender = char.MinValue;
 bool working;
@@ -16,8 +20,9 @@ firstName = Console.ReadLine();
 Console.Write("Please enter your last name: ");
 lastName = Console.ReadLine();
 
-Console.Write("Please enter your age: ");
-age = Convert.ToInt32(Console.ReadLine());
+Console.Write("Please enter your date of birth (dd/mm/yyyy): ");
+dob = DateOnly.ParseExact(Console.ReadLine(), "dd/mm/yyyy", CultureInfo.InvariantCulture);
+age = DateTime.Now.Year - dob.Year;
 
 Console.Write("Please enter your salary: ");
 salary = Convert.ToDecimal(Console.ReadLine());
@@ -32,9 +37,10 @@ working = Convert.ToBoolean(Console.ReadLine());
 
 // find retirement years left
 int yearsToRetire = retireAge - age;
+var estimatedRetirementYear = DateTime.Now.AddYears(yearsToRetire);
 
 
 
 // output the results
-Console.WriteLine($"\nFull name: {firstName} {lastName}\nAge: {age}\nSalary: {salary:C}\nGender: {gender}\nCurrently employed: {working}\nWorking years remaining: {yearsToRetire}");
+Console.WriteLine($"\nFull name: {firstName} {lastName}\nAge: {age}\nSalary: {salary:C}\nGender: {gender}\nCurrently employed: {working}\nWorking years remaining: {yearsToRetire}\nEstimated Retirement Year: {estimatedRetirementYear.Year}");
 
