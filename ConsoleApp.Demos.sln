@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.StringManipulati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.DateTimeManipulation", "ConsoleApp.DateTimeManipulation\ConsoleApp.DateTimeManipulation.csproj", "{24488E41-5748-4F1F-9456-A9E1DC89BF02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.Methods", "ConsoleApp.Methods\ConsoleApp.Methods.csproj", "{518083D7-80E8-416E-BC75-A4F12E7B7C4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{24488E41-5748-4F1F-9456-A9E1DC89BF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24488E41-5748-4F1F-9456-A9E1DC89BF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24488E41-5748-4F1F-9456-A9E1DC89BF02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{518083D7-80E8-416E-BC75-A4F12E7B7C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{518083D7-80E8-416E-BC75-A4F12E7B7C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{518083D7-80E8-416E-BC75-A4F12E7B7C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{518083D7-80E8-416E-BC75-A4F12E7B7C4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,115 +1,118 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-// Weclome Message
-Console.WriteLine("*~*~*~*~ Welcome to the Sample Calculator! *~*~*~*~\n\n");
-Console.WriteLine("\nWould you like to get started? Press 'Enter' continue or 'E' to exit calculator: ");
+// Variable Declarations
+int choice = 0;
+int num1, num2 = 0;
 
-// Initialize all variables to be in a global scope
-string? choice = Console.ReadLine();
-int calculation = 0;
-int num1 = 0;
-int num2 = 0;
-
-
-while (choice != "E")
+// Show calculator options / Show menu
+while (choice != -1)
 {
     try
     {
-        // Show Calculator Operations
-        Console.WriteLine("Here are your calculation choices:\n");
-        Console.WriteLine("Select '1' for addition...");
-        Console.WriteLine("Select '2' for subtraction...");
-        Console.WriteLine("Select '3' for multiplication...");
-        Console.WriteLine("Select '4' for division...");
-        Console.WriteLine("Select '5' for Fibonacci sequence...");
-        Console.Write("\nWhat calculation would you like to make: ");
-        calculation = Convert.ToInt32(Console.ReadLine());
+        // Welcome Message
+        PrintMenu();
 
-        if (calculation >=1 && calculation <=5)
-        {
-            // Prompt for User Input
-            Console.Write("\nPlease enter the first number: ");
-            num1 = Convert.ToInt32(Console.ReadLine());
+        choice = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("\nPlease enter the second number: ");
-            num2 = Convert.ToInt32(Console.ReadLine());
-        } else
+        if (choice == -1)
         {
-            Console.WriteLine("\nInvalid input, press 'Enter' to try again.");
-            Console.ReadLine();
-            Console.Clear();
-            continue;
+            break;
         }
 
-        // Decide Which Operations are Needed Based On Selections
-        int result = 0;
-        string symbol = string.Empty;
+        Console.Write("\nPlease enter the first number: ");
+        num1 = Convert.ToInt32(Console.ReadLine());
 
-        if (calculation == 1)
+        Console.Write("\nPlease enter the second number: ");
+        num2 = Convert.ToInt32(Console.ReadLine());
+
+        /* Switch statement */
+        int answer = 0;
+        switch (choice)
         {
-            result = num1 + num2;
-            symbol = "+";
-        }
-        else if (calculation == 2)
-        {
-            result = num1 - num2;
-            symbol = "-";
-        }
-        else if (calculation == 3)
-        {
-            result = num1 * num2;
-            symbol = "*";
-        }
-        else if (calculation == 4)
-        {
-            result = num1 / num2;
-            symbol = "/";
-        }
-        else if (calculation == 5)
-        {
-            for (int i = num1; i <= num2; i++)
-            {
-                result += i;
-            }
+            case 1:
+                answer = AddNumbers(num1, num2);
+                break;
+            case 2:
+                answer = SubtractNumbers(num1, num2);
+                break;
+            case 3:
+                answer = MultiplyNumbers(num1, num2);
+                break;
+            case 4:
+                answer = DivideNumbers(num1, num2);
+                break;
+            case 5:
+                answer = Fibonacci(num1, num2);
+                break;
+            default:
+                throw new Exception("\nInvalid Menu Item Selected.");
         }
 
-        // Print Output Decisions
-        if (calculation >= 1 && calculation <= 4)
-        {
-            Console.WriteLine($"\n{num1} {symbol} {num2} = {result}\n");
-        }
-        else if (calculation == 5)
-        {
-            Console.WriteLine($"\nFibonacci result: {result}\n");
-        }
-        else
-        {
-            Console.WriteLine("\nPlease try again.");
-        }
-
-        Console.WriteLine("\nWould you like to continue? Press 'Enter' continue or 'E' to exit calculator: ");
-        choice = Console.ReadLine();
-        Console.Clear();
+        // print output 
+        Console.WriteLine($"\nThe result is: {answer}");
     }
     catch (DivideByZeroException)
     {
-        Console.WriteLine("\nCannot divide by zero.");
-        continue;
+        Console.WriteLine("\nCannot divide by zero");
     }
-    catch (Exception)
+    catch (Exception ex)
     {
-        Console.WriteLine("\nInvalid input, press 'Enter' to try again.");
-        continue;
-    } 
+        Console.WriteLine(ex.Message);
+    }
     finally
     {
-        Console.WriteLine("\nPress 'Enter' to try again.");
+        Console.WriteLine("\nPress any key to continue.");
         Console.ReadLine();
-        Console.Clear();
     }
 }
 
-Console.WriteLine("\n\n*~*~*~*~ THANK YOU for using the Sample Calculator! *~*~*~*~\n\n");
+Console.WriteLine("\n******** - Thank you for using the sample calculator! - ********\n");
+
+
+
+
+// Methods
+void PrintMenu()
+{
+    Console.Clear();
+    Console.WriteLine("\n******** - Welcome to the sample calculator! - ********\n");
+    Console.WriteLine("Please select an operation (-1 to exit program) ");
+    Console.WriteLine("1. Addition");
+    Console.WriteLine("2. Subtraction");
+    Console.WriteLine("3. Multiplication");
+    Console.WriteLine("4. Division");
+    Console.WriteLine("5. Fibonacci sequence");
+}
+
+int AddNumbers(int num1, int num2)
+{
+    return num1 + num2;
+}
+
+int SubtractNumbers(int num1, int num2)
+{
+    return num1 - num2;
+}
+
+int MultiplyNumbers(int num1, int num2)
+{
+    return num1 * num2;
+}
+
+int DivideNumbers(int num1, int num2)
+{
+    return num1 / num2;
+}
+
+int Fibonacci(int num1, int num2)
+{
+    var answer = 0;
+    for (int i = num1; i <= num2; i++)
+    {
+        answer += i;
+    }
+    return answer;
+}
 
 
 
