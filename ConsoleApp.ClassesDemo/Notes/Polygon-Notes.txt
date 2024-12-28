@@ -1,0 +1,31 @@
+﻿// See https://aka.ms/new-console-template for more information
+
+
+using ConsoleApp.ClassesDemo;
+
+//Rectangle rectangle = new(10, 20);
+//var rectArea = rectangle.Area();
+
+//Square square = new(50);
+//var squareArea = square.Area();
+
+
+//Console.WriteLine($"Rectangle Area: {rectArea}\n\nSquare Area: {squareArea}");
+
+Cuboid cuboid = new(1, 5, 7);
+var cuboidArea = cuboid.Area();
+var cuboidVolume = cuboid.Volume();
+var cuboidPerimeter = cuboid.Perimeter();
+Console.WriteLine($"Cuboid area is: {cuboidArea}");
+Console.WriteLine($"Cuboid volume is: {cuboidVolume}");
+Console.WriteLine($"Cuboid perimeter is: {cuboidPerimeter}");
+
+Console.WriteLine($"\n----------------------------------------\n");
+
+Sphere sphere = new(7);
+var sphereCircumference = sphere.Circumference();
+var sphereVolume = sphere.Volume();
+Console.WriteLine($"Sphere circumference is: {sphereCircumference}");
+Console.WriteLine($"Sphere volume is: {sphereVolume}");
+
+Console.WriteLine($"\n----------------------------------------\n");

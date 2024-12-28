@@ -1,0 +1,59 @@
+﻿//Console.WriteLine($"~*~*~*~*~* Classes and Objects ~*~*~*~*~*\n\n");
+
+// Define an Object of Type Person
+//Person baby1 = new Person();
+//baby1.FirstName = "Rachael";
+//baby1.LastName = "Pracht";
+//baby1.DateOfBirth = new DateOnly(1987,12,01);
+
+//baby1.PrintFullName();
+//baby1.PrintIntials();
+//baby1.GenerateTaxNumber();
+
+//var taxNumber = baby1.GetTaxNumber();
+//Console.WriteLine($"Tax number: {taxNumber}");
+
+//var baby2 = new Person("Emmett", "Pracht", new DateOnly(2010,05,13));
+//baby2.PrintFullName();
+//baby2.PrintIntials();
+
+//var baby3 = new Person("Phil", "Pracht", "1234567891");
+//baby3.PrintFullName();
+//baby3.PrintIntials();
+//baby3.GenerateTaxNumber();
+
+//Console.WriteLine($"\n***** TEACHER *****\n");
+
+//var teacher = new Teacher();
+//teacher.FirstName = "Rachael";
+//teacher.LastName = "Pracht";
+//teacher.DateOfBirth = new DateOnly(1987,12,01);
+
+//teacher.PrintFullName();
+//teacher.PrintIntials();
+//teacher.GenerateTaxNumber();
+//teacher.GenerateTeacherIdNumber();
+
+//var teacherTaxNum = teacher.GetTaxNumber();
+//Console.WriteLine($"\nTax Number: {teacherTaxNum}\n");
+
+//var teacherIdNum = teacher.GetIdNumber();
+//Console.WriteLine($"ID Number: {teacherIdNum}\n");
+
+//Console.WriteLine($"\n***** STUDENT *****\n");
+
+//var student = new Student();
+//student.FirstName = "Emmett";
+//student.LastName = "Pracht";
+//student.DateOfBirth = new DateOnly(2010, 05, 13);
+
+//student.PrintFullName();
+//student.PrintIntials();
+//student.GenerateTaxNumber();
+//student.GenerateStudentIdNumber();
+
+//var studentTaxNum = student.GetTaxNumber();
+//Console.WriteLine($"\nTax Number: {studentTaxNum}\n");
+
+//var studentIdNum = student.GetIdNumber();
+//Console.WriteLine($"ID Number: {studentIdNum}\n");
